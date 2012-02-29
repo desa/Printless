@@ -1,4 +1,6 @@
 Printless::Application.routes.draw do
+  get "temp_homepage/temphome"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
