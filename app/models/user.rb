@@ -14,6 +14,7 @@
 #
 
 class User < ActiveRecord::Base
+  attr_protected :journalist
   attr_accessible :name, :email, :about_me, :twitter_id, :interests,
                   :password, :password_confirmation
   has_secure_password
