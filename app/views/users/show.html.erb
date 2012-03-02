@@ -5,17 +5,10 @@
       <h1>
         <%= @user.name %>
       </h1>
-   <% if @user.articles.any? %>
-        <table class="articles">
-          <%= render @articles %>
-        </table>
-        <%= will_paginate @articles %>
-      <% end %>
     </td>
     <td class="sidebar round">
       <strong>Name</strong> <%= @user.name %><br />
       <strong>URL</strong>  <%= link_to user_path(@user), @user %>
-	  <strong>Microposts</strong> <%= @user.articles.count %>
     </td>
   </tr>
 </table>

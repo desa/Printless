@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120302090837) do
+ActiveRecord::Schema.define(:version => 20120302111709) do
 
   create_table "articles", :force => true do |t|
     t.string   "title"
@@ -22,6 +22,52 @@ ActiveRecord::Schema.define(:version => 20120302090837) do
   end
 
   add_index "articles", ["user_id", "created_at"], :name => "index_articles_on_user_id_and_created_at"
+
+  create_table "comments", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "article_id"
+    t.integer  "project_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "comments", ["user_id"], :name => "index_comments_on_user_id"
+
+  create_table "dontaions", :force => true do |t|
+    t.integer  "donator_id"
+    t.integer  "donatee_id"
+    t.datetime "charged_at"
+    t.integer  "amount"
+    t.integer  "project_id"
+    t.integer  "writer_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "projects", :force => true do |t|
+    t.integer  "writer_id"
+    t.string   "title"
+    t.string   "content"
+    t.integer  "money_wanted"
+    t.integer  "money_earned"
+    t.string   "subject"
+    t.datetime "finish_date"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  add_index "projects", ["writer_id", "created_at"], :name => "index_projects_on_writer_id_and_created_at"
+
+  create_table "relationships", :force => true do |t|
+    t.integer  "follower_id"
+    t.integer  "followed_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "relationships", ["followed_id"], :name => "index_relationships_on_followed_id"
+  add_index "relationships", ["follower_id", "followed_id"], :name => "index_relationships_on_follower_id_and_followed_id", :unique => true
+  add_index "relationships", ["follower_id"], :name => "index_relationships_on_follower_id"
 
   create_table "users", :force => true do |t|
     t.string   "name"
