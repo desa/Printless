@@ -1,0 +1,2 @@
+class InvitationListsController < ApplicationController
+end
