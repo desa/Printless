@@ -2,10 +2,10 @@ require 'spec_helper'
 
 describe Article do
 
-  let(:user) { FactoryGirl.create(:user) }
   before do
-    # This code is wrong!
-    @article = Article.new(title: "Lorem", content: "Lorem ipsum", user_id: user.id)
+    user = User.create(name: "Example user", email: "example@example.com",
+                        password: "example", password_confirmation: "example")
+    @article = Article.create(title: "Lorem", content: "Lorem ipsum", user_id: user.id)
   end
 
   subject { @article }

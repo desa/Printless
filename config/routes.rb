@@ -1,7 +1,10 @@
 Printless::Application.routes.draw do
-  resources :users
+  resources :users do
+    resources :aricles, only: [:create, :edit, :destroy]
+    resources :projects, only: [:create, :edit, :destroy]
+  end
+  
   resources :sessions, only: [:new, :create, :destroy]
-  resources :aricles, only: [:create, :destroy]
   
   match '/signup',  to: 'users#new'
   match '/signin',  to: 'sessions#new'

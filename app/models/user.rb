@@ -14,12 +14,13 @@
 #
 
 class User < ActiveRecord::Base
-  attr_protected :journalist
   attr_accessible :name, :email, :about_me, :twitter_id, :interests,
-                  :password, :password_confirmation
+                  :password, :password_confirmation, :journalist
   has_secure_password
   
   has_many :aticles, dependent: :destroy
+  has_many :relationships, foreign_key: "follower_id", dependent: :destroy
+  has_many :followed_users, through: :relationships, source: :followed
   
   before_save :create_remember_token
   
