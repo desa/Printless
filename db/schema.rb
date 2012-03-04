@@ -11,14 +11,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120302112220) do
+ActiveRecord::Schema.define(:version => 20120304144557) do
 
   create_table "articles", :force => true do |t|
     t.string   "title"
-    t.string   "content"
+    t.text     "content",    :limit => 255
     t.integer  "user_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
   end
 
   add_index "articles", ["user_id", "created_at"], :name => "index_articles_on_user_id_and_created_at"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(:version => 20120302112220) do
     t.integer  "project_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.text     "content"
   end
 
   add_index "comments", ["user_id"], :name => "index_comments_on_user_id"
@@ -55,13 +56,14 @@ ActiveRecord::Schema.define(:version => 20120302112220) do
   create_table "projects", :force => true do |t|
     t.integer  "writer_id"
     t.string   "title"
-    t.string   "content"
+    t.text     "content",      :limit => 255
     t.integer  "money_wanted"
     t.integer  "money_earned"
     t.string   "subject"
     t.datetime "finish_date"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.datetime "created_at",                  :null => false
+    t.datetime "updated_at",                  :null => false
+    t.text     "expenses"
   end
 
   add_index "projects", ["writer_id", "created_at"], :name => "index_projects_on_writer_id_and_created_at"
@@ -80,12 +82,12 @@ ActiveRecord::Schema.define(:version => 20120302112220) do
   create_table "users", :force => true do |t|
     t.string   "name"
     t.string   "email"
-    t.string   "about_me"
+    t.text     "about_me",        :limit => 255
     t.boolean  "journalist"
     t.string   "twitter_id"
     t.string   "interests"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+    t.datetime "created_at",                     :null => false
+    t.datetime "updated_at",                     :null => false
     t.string   "password_digest"
     t.string   "remember_token"
   end
