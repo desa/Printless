@@ -1,3 +1,184 @@
-// Place all the styles related to the TempHomepage controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+    background-color:#FFF;
+}
+
+#newtake {
+    font-family: courier, "Letter Gothic Std", Verdana,Geneva,'DejaVu Sans',sans-serif;
+    font-size:1em;
+    margin-bottom:0px;
+    margin-top:30px;
+    font-size:1.75em;
+    text-decoration:none;
+    margin-left:50px;
+    text-align:left;
+}
+
+#invite {
+    font-family:"Letter Gothic Std", Veranda, Geneva,'DejaVu Sans',sans-serif;
+    font-style: italics;
+    font-size:1em;
+    margin-top:40px;
+    margin-bottom:30px;
+    text-align:left;
+    margin-left:50px;
+    margin-right:50px;
+}
+
+#journalism {
+    font-family:"cn", courier;
+    margin-top:0px;
+    font-size:1.75em;
+    text-align:left;
+    margin-left:200px;
+    color:#FF6700;
+}
+
+body a {color:#000; text-decoration:none}
+body a:link {color:#000; text-decoration:none;}
+body a:visted {color:#333; text-decoration:none;}
+body a:hover {text-decoration:underline;}
+body a:active {color:#000; text-decoration:none;}
+
+.header {
+    position:relative;
+    margin-left:auto;
+    margin-right:auto;
+    width:500px;
+    margin-bottom:13px;
+    margin-top:10px;
+}
+
+
+
+.content {
+    position:relative;
+    width:500px;
+    height:390px;
+    margin-left:auto;
+    margin-right:auto;
+    padding-top:15px;
+    border-color:#000;
+    border-style:solid;
+    border-width:1px;
+    text-align:center;
+    
+}
+
+#email {
+    border-color:black;
+    width:210px;
+    height:15px;
+    margin-right:15px;
+    font-family: "Letter Gothic Std", Verdana,Geneva,'DejaVu Sans',sans-serif;
+    color:#000;
+    border-width:2px;
+    padding-top:4px;
+    padding-bottom:2px;
+}
+
+#submit {
+    border-radius:5px;
+    -moz-border-radius:5px;
+    width:70px;
+    background-color:#FFF;
+    border-color:#000;
+    color:#000;
+    border-width:2px;
+    height:24px;
+    font-family: "Letter Gothic Std", Verdana,Geneva,'DejaVu Sans',sans-serif;
+    padding-top:5px;
+}
+
+#submit:hover {
+    border-color:#000;
+    background-color:#000;
+    color:#FFF;
+    border-width:1px;
+}
+#contact {
+    position:absolute;
+    text-align:right;
+    bottom:10px;
+    left:20px;
+    font-family: "Letter Gothic Std", Verdana,Geneva,'DejaVu Sans',sans-serif;
+}
+/**add twitter and facebook links**/
+
+
+.tempcontainer {
+    width:600px;
+    margin-bottom:300px;
+    margin-top:50px;
+    background-color:#FFF;
+    margin-left:auto;
+    margin-right:auto;
+    padding-top:20px;
+    padding-bottom:70px;
+}
+
+#period {
+    color:#000;
+}
+
+.journalist {
+    display:block;
+    height:50px;
+    width:500px;
+    font-family: "Letter Gothic Std", Verdana,Geneva,'DejaVu Sans',sans-serif;
+    margin-bottom:0px;
+    font-size:.8em;
+}
+
+#q {
+    display:block;
+    float:left;
+    margin-right:55px;
+    margin-left:102px;
+}
+#yes {
+display:block;
+float:left;
+margin-top:9px;
+}
+
+#no {
+display:block;
+float:left;
+margin-top:15px;
+}
+
+.emailcont {
+    display:block;
+    width:500px;
+    clear:left;
+}
+
+#twitter {
+    display:block;
+    position:absolute;
+    bottom:10px;
+    right:60px;
+    width:25px;
+    height:25px;
+    background: url('twitter_dualbw.png') left;
+    text-indent:-99999px;
+}
+
+#twitter:hover {
+    background-position: right;
+}
+
+#fb {
+    display:block;
+    position:absolute;
+	bottom:10px;
+	right:20px;
+    width:25px;
+    height:25px;
+    background: url('fb_dualbw.png') left;
+    text-indent:-99999px;
+}
+
+#fb:hover {
+    background-position: right;
+}

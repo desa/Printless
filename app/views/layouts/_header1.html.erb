@@ -1,0 +1,102 @@
+<div class="header1">
+	<div class="topbar">
+	</div>
+	
+	<div class="headcontainer">
+			<%= render 'layouts/header' %>
+		<div class="logo">
+			<a id="blacklargelogo" href="">
+				<%= image_tag('pllogoblack.png')%></a>
+		</div>
+		<ul class="social" id="sociallinks">
+				<li><a id="twitter" href="https://twitter.com/#!/thePrintless">
+					Twitter</a></li>
+				<li><a id="fb" href="https://www.facebook.com">
+					Facebook</a></li>
+		</ul>
+		<div class="search">
+			<form method="get" action="http://google.com/search">
+				<input type="text" name="q" size="25" maxlength="255"
+				value="" placeholder="search" id="searchinput"/>
+				<input type="submit" value="" id="searchbutton"/>
+				<input type="hidden" name="sitesearch" value="www.theprintless.com"/>
+				</form>
+		</div>
+	</div>
+
+	<ul id="nav">
+		<li class="taba" id="tab1">
+			<a href="#">Projects</a>
+			<ul class="dropdown" id ="subsections1">
+				<li class="subsect" id="ss11"><a href="#">subsection1</a></li>
+				<li class="subsect" id="ss12"><a href="#">subsection2</a></li>
+				<li class="subsect" id="ss13"><a href="#">subsection3</a></li>
+				<li class="subsect" id="ss14"><a href="#">subsection4</a></li>
+				<li class="subsect" id="ss15"><a href="#">subsection5</a></li>
+			</ul>
+		</li>
+		<li class="taba" id="tab2">
+			<a href="#">Journalists</a>
+			<ul class="dropdown" id ="subsections2">
+				<li class="subsect" id="ss21"><a href="#">subsection1</a></li>
+				<li class="subsect" id="ss22"><a href="#">subsection2</a></li>
+				<li class="subsect" id="ss23"><a href="#">subsection3</a></li>
+				<li class="subsect" id="ss24"><a href="#">subsection4</a></li>
+				<li class="subsect" id="ss25"><a href="#">subsection5</a></li>
+			</ul>
+		</li>
+		<li class="tabb" id="tab3">
+			<a href="#">Subject 1</a>
+			<ul class="dropdown" id ="subsections3">
+				<li class="subsect" id="ss31"><a href="#">subsection1</a></li>
+				<li class="subsect" id="ss32"><a href="#">subsection2</a></li>
+				<li class="subsect" id="ss33"><a href="#">subsection3</a></li>
+				<li class="subsect" id="ss34"><a href="#">subsection4</a></li>
+				<li class="subsect" id="ss35"><a href="#">subsection5</a></li>
+			</ul>
+		</li>	
+		<li class="tabb" id="tab4">
+			<a href="#">Subject 2</a>
+			<ul class="dropdown" id ="subsections4">
+				<li class="subsect" id="ss41"><a href="#">subsection1</a></li>
+				<li class="subsect" id="ss42"><a href="#">subsection2</a></li>
+				<li class="subsect" id="ss43"><a href="#">subsection3</a></li>
+				<li class="subsect" id="ss44"><a href="#">subsection4</a></li>
+				<li class="subsect" id="ss45"><a href="#">subsection5</a></li>
+			</ul>
+		</li>	
+		<li class="tabb" id="tab5">
+			<a href="#">Subject 3</a>
+			<ul class="dropdown" id ="subsections5">
+				<li class="subsect" id="ss51"><a href="#">subsection1</a></li>
+				<li class="subsect" id="ss52"><a href="#">subsection2</a></li>
+				<li class="subsect" id="ss53"><a href="#">subsection3</a></li>
+				<li class="subsect" id="ss54"><a href="#">subsection4</a></li>
+				<li class="subsect" id="ss55"><a href="#">subsection5</a></li>
+			</ul>
+		</li>
+		<li class="tabb" id="tab6">
+			<a href="#">Subject 4</a>
+			<ul class="dropdown" id ="subsections6">
+				<li class="subsect" id="ss61"><a href="#">subsection1</a></li>
+				<li class="subsect" id="ss62"><a href="#">subsection2</a></li>
+				<li class="subsect" id="ss63"><a href="#">subsection3</a></li>
+				<li class="subsect" id="ss64"><a href="#">subsection4</a></li>
+				<li class="subsect" id="ss65"><a href="#">subsection5</a></li>
+			</ul>
+		</li>
+		<li class="tabb" id="tab7">
+			<a href="#">Subject 5</a>
+			<ul class="dropdown" id ="subsections7">
+				<li class="subsect" id="ss71"><a href="#">subsection1</a></li>
+				<li class="subsect" id="ss72"><a href="#">subsection2</a></li>
+				<li class="subsect" id="ss73"><a href="#">subsection3</a></li>
+				<li class="subsect" id="ss74"><a href="#">subsection4</a></li>
+				<li class="subsect" id="ss75"><a href="#">subsection5</a></li>
+			</ul>
+		</li>
+	</ul>
+</div>
+<script type="text/javascript">
+dropdown();
+</script>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120304144557) do
+ActiveRecord::Schema.define(:version => 20120306012338) do
 
   create_table "articles", :force => true do |t|
     t.string   "title"
@@ -49,6 +49,7 @@ ActiveRecord::Schema.define(:version => 20120304144557) do
     t.string   "email"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.boolean  "journalist"
   end
 
   add_index "invitation_lists", ["email"], :name => "index_invitation_lists_on_email"

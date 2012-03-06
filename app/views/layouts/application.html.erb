@@ -1,26 +1,17 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Printless | <%= yield(:title) %></title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-	<div class="container">
-	  <%= render 'layouts/header' %>
+  <head>
+    <%= render 'layouts/stylesheets' %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div class="container">
+      <%= render 'layouts/header1' %>
       <section class="round">
-        <% flash.each do |key, value| %>
-          <div class="flash <%= key %>"><%= value %></div>
-        <% end %>
         <%= yield %>
       </section>
-      
-		<section class="round">
-
-		</section>
-		<%= render 'layouts/footer' %>
-		<%= debug(params) if Rails.env.development? %>
-	</div>
+      <%= render 'layouts/footer' %>
+    </div>
   </body>
 </html>
