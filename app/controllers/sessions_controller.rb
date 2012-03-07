@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
       sign_in user
       redirect_to user
     else
-      flash[:error] = 'Invalid emai/password combo'
+      flash[:error] = 'Invalid email/password combo'
       render 'new'
     end
   end

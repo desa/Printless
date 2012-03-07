@@ -18,9 +18,9 @@ class User < ActiveRecord::Base
                   :password, :password_confirmation, :journalist
   has_secure_password
   
-  has_many :aticles, dependent: :destroy
-  has_many :relationships, foreign_key: "follower_id", dependent: :destroy
-  has_many :followed_users, through: :relationships, source: :followed
+  #has_many :aticles, dependent: :destroy
+  #has_many :relationships, foreign_key: "follower_id", dependent: :destroy
+  #has_many :followed_users, through: :relationships, source: :followed
   
   before_save :create_remember_token
   
