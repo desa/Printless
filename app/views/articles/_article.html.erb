@@ -1,0 +1,12 @@
+<tr>
+  <td class="article">
+	<strong>Author</strong> <%= @article.user_id %><br />
+	 <strong>Title</strong> <%= @article.title %><br/>
+	<strong>Content</strong> <%= @article.content %><br/>
+	<strong>URL</strong>  <%= link_to article_path(@article), @article %><br/>
+    <span class="timestamp">
+      Posted <%= time_ago_in_words(@article.created_at) %> ago.
+    </span>
+  </td>
+</tr>
+

@@ -1,16 +1,46 @@
 class ArticlesController < ApplicationController
-  before_filter :signed_in_user, only: [:create, :destroy]
+  #before_filter :signed_in_user, only: [:new, :create, :destroy]
+  #before_filter :current_user, only: [:new, :create, :destroy]
   
+ def index
+    @article = Article.all
+  end
+
+  def show
+    @article = Article.find(params[:id])
+  end
+
+  def new
+    @article = current_user.articles.build(params[:article])
+  end
+
+  def edit
+    @article = current_user.articles.build(params[:article])
+  end
+
   def create
-    @article = current_user.article.build(params[:article])
+    @article = current_user.articles.build(params[:article])
     if @article.save
-      flash[:success] = "Article created!"
-      redirect_to root_path
+      redirect_to articles_path
     else
-      render root_path
+      redirect_to root_path
     end
   end
   
-  def destroy
-  end
+  ####NEED TO FIX THIS PART####
+  
+   # def update
+    #  @article = Article.find(params[:id])
+     # if @article.update_attributes(params[:article])
+      #  @article.save
+       # redirect_to @article
+      #else
+      #render 'edit'
+    #end
+  #end
+  #def destroy
+   # @article = Article.find(params[:id])
+  #  @article.destroy
+  #end
+  
 end
