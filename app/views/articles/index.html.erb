@@ -1,11 +1,14 @@
 <h1>All Articles</h1>
 
+<%= will_paginate %>
 
 <ul class="articles">
-  <% @article.each do |article| %>
+  <% @articles.each do |article| %>
     <li> <%= User.find(article.user_id).name %><br/>
 	 	 <%= link_to article_path(article), article %><br/>
 		 <%= article.title %><br/>
 		 <%= article.content %></li><br/><br/>
   <% end %>
 </ul>
+
+<%= will_paginate %>

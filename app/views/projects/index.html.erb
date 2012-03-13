@@ -1,0 +1,15 @@
+<h1>All Projects</h1>
+
+<%= will_paginate %>
+
+<ul class="projects">
+  <% @projects.each do |project| %>
+    <li> <%= User.find(project.user_id).name %><br/>
+	 	 <%= link_to project_path(project), project %><br/>
+		 <%= project.title %><br/>
+		 <%= project.content %></li><br/>
+		Money Wanted: <%= project.money_wanted %><br/><br/>
+  <% end %>
+</ul>
+
+<%= will_paginate %>

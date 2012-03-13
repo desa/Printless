@@ -1,0 +1,11 @@
+<h2> My Articles </h2>
+<% if @user.articles.any? %>
+<%= will_paginate @articles %>
+<ul class="articles">
+  <% @articles.each do |article| %>
+    <li> <%= link_to article.title, article %></br>
+		 <%= article.content %>
+    </li><br/><br/>
+  <% end %>
+<% end %>
+</ul>

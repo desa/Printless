@@ -3,31 +3,38 @@ class UsersController < ApplicationController
   before_filter :current_user,   only: [:edit, :update, :destroy]
   before_filter :admin_user,     only: :destroy
   
+  # Function deletes the current user and returns them to the root path #
   def destroy
     @user = User.find(params[:id])
     if @user == current_user
       @user.destroy
       redirect_to root_path
-    else
+    elsif  current_user.admin
       @user.destroy
+      redirect_to users_path
+    else
       redirect_to users_path
     end
   end
 
-  
+  # Creates an index of users to paginate #
   def index
     @users = User.paginate(page: params[:page])
   end
   
+  # Gets a user based on params for show page #
   def show
     @user = User.find(params[:id])
-    #@articles = @user.articles.paginate(page: params[:page])
+    @articles = @user.articles.paginate(page: params[:page])
+    @projects = @user.projects.paginate(page: params[:page])
   end
-  
+
+  # Gets a user based on params for edit page #  
   def edit
     @user = User.find(params[:id])
   end
-  
+
+  # Updates a user based on params from edit page #   
   def update
     @user = User.find(params[:id])
     if @user.update_attributes(params[:user])
@@ -36,13 +43,15 @@ class UsersController < ApplicationController
       redirect_to @user
     else
     render 'edit'
+    end
   end
-end
   
+  # Obvi brah, new instance brah #
   def new
     @user = User.new
   end
   
+  # brooooahahah #
   def create
     @user = User.new(params[:user])
     if @user.save

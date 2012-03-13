@@ -1,5 +1,5 @@
 <h1> Edit Article Page </h1>
-<%= form_for(:article, url: article_path) do |f| %>
+<%= form_for(@article) do |f| %>
   <div class="field">
     <%= f.label :title %><br />
     <%= f.text_field :title %>

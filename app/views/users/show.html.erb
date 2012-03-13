@@ -12,6 +12,11 @@
       <strong>Twitter</strong> <%= @user.twitter_id %><br/>
       <strong>Interests</strong> <%= @user.interests %><br/>
       <strong>URL</strong>  <%= link_to user_path(@user), @user %><br/>
-    </td>
+	  <%= link_to 'New Article', new_article_path %>
+	  <%= link_to 'New Project', new_project_path %>
+
+	<%= render 'users/my_articles' %>
+	<%= render 'users/my_projects' %>
+	 </td>
   </tr>
 </table>

@@ -1,7 +1,8 @@
-#<ul>
-#	<% if current_user.id == @article.user_id %>
-#	<li><%= link_to "Edit Article", edit_article_path %></li>
-	<li><%= link_to "Delete Article", article_path %></li>
+<ul>
+	<% if current_user.id == @article.user_id %>
+	<li><%= link_to "Edit Article", edit_article_path %></li>
+	<li><%= #doesnt work#
+	link_to "Delete Article", article_path, via: :delete %></li>
 	<% end %>
 <ul>
 	

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120307052357) do
+ActiveRecord::Schema.define(:version => 20120312233406) do
 
   create_table "articles", :force => true do |t|
     t.string   "title"
@@ -55,7 +55,7 @@ ActiveRecord::Schema.define(:version => 20120307052357) do
   add_index "invitation_lists", ["email"], :name => "index_invitation_lists_on_email"
 
   create_table "projects", :force => true do |t|
-    t.integer  "writer_id"
+    t.integer  "user_id"
     t.string   "title"
     t.text     "content",      :limit => 255
     t.integer  "money_wanted"
@@ -67,7 +67,7 @@ ActiveRecord::Schema.define(:version => 20120307052357) do
     t.text     "expenses"
   end
 
-  add_index "projects", ["writer_id", "created_at"], :name => "index_projects_on_writer_id_and_created_at"
+  add_index "projects", ["user_id", "created_at"], :name => "index_projects_on_writer_id_and_created_at"
 
   create_table "relationships", :force => true do |t|
     t.integer  "follower_id"

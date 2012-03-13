@@ -18,6 +18,7 @@ class User < ActiveRecord::Base
                   :password, :password_confirmation, :journalist
   has_secure_password
   
+  has_many :projects, dependent: :destroy
   has_many :articles, dependent: :destroy
   #has_many :relationships, foreign_key: "follower_id", dependent: :destroy
   #has_many :followed_users, through: :relationships, source: :followed
