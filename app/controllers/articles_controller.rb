@@ -3,12 +3,12 @@ class ArticlesController < ApplicationController
   before_filter :current_user, only: [:new, :create, :destroy]
   
  def index
-    #@articles = Article.all
     @articles = Article.paginate(page: params[:page])
   end
 
   def show
     @article = Article.find(params[:id])
+    @comments = @article.comments.paginate(page: params[:page])
   end
 
   def new
@@ -17,6 +17,7 @@ class ArticlesController < ApplicationController
 
   def edit
      @article = Article.find(params[:id])
+     redirect_to @article unless current_user.id == @article.user_id
   end
 
   def create

@@ -12,8 +12,12 @@
       <strong>Twitter</strong> <%= @user.twitter_id %><br/>
       <strong>Interests</strong> <%= @user.interests %><br/>
       <strong>URL</strong>  <%= link_to user_path(@user), @user %><br/>
-	  <%= link_to 'New Article', new_article_path %>
-	  <%= link_to 'New Project', new_project_path %>
+	  <% if @user == current_user %> 
+		<%= link_to 'New Article', new_article_path %>
+	  	<%= link_to 'New Project', new_project_path %>
+		<% end %>
+	  <%= render '/shared/stats' %>
+	  <%= render 'follow_form' if signed_in? %>
 
 	<%= render 'users/my_articles' %>
 	<%= render 'users/my_projects' %>

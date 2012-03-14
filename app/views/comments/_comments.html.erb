@@ -1,0 +1,8 @@
+<ul class="comments">
+	<%= will_paginate @comments %>
+  <% @comments.each do |comment| %>
+	<% user = User.find(comment.user_id) %>
+    <li> <%= link_to user.name, user %><br/>
+		 <%= comment.content %></li><br/><br/>
+  <% end %>
+</ul>

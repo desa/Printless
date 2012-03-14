@@ -11,38 +11,36 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120312233406) do
+ActiveRecord::Schema.define(:version => 20120314042932) do
 
   create_table "articles", :force => true do |t|
     t.string   "title"
-    t.text     "content",    :limit => 255
     t.integer  "user_id"
-    t.datetime "created_at",                :null => false
-    t.datetime "updated_at",                :null => false
-  end
-
-  add_index "articles", ["user_id", "created_at"], :name => "index_articles_on_user_id_and_created_at"
-
-  create_table "comments", :force => true do |t|
-    t.integer  "user_id"
-    t.integer  "article_id"
-    t.integer  "project_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.text     "content"
   end
 
-  add_index "comments", ["user_id"], :name => "index_comments_on_user_id"
+  add_index "articles", ["user_id", "created_at"], :name => "index_articles_on_user_id_and_created_at"
 
-  create_table "dontaions", :force => true do |t|
+  create_table "comments", :force => true do |t|
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+    t.text     "content"
+    t.integer  "commentable_id"
+    t.integer  "user_id"
+    t.string   "commentable_type"
+  end
+
+  create_table "donations", :force => true do |t|
     t.integer  "donator_id"
     t.integer  "donatee_id"
     t.datetime "charged_at"
     t.integer  "amount"
-    t.integer  "project_id"
-    t.integer  "writer_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.string   "donatable_type"
+    t.integer  "donatable_id"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
   end
 
   create_table "invitation_lists", :force => true do |t|
@@ -57,14 +55,14 @@ ActiveRecord::Schema.define(:version => 20120312233406) do
   create_table "projects", :force => true do |t|
     t.integer  "user_id"
     t.string   "title"
-    t.text     "content",      :limit => 255
     t.integer  "money_wanted"
     t.integer  "money_earned"
     t.string   "subject"
     t.datetime "finish_date"
-    t.datetime "created_at",                  :null => false
-    t.datetime "updated_at",                  :null => false
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
     t.text     "expenses"
+    t.text     "content"
   end
 
   add_index "projects", ["user_id", "created_at"], :name => "index_projects_on_writer_id_and_created_at"
@@ -83,15 +81,15 @@ ActiveRecord::Schema.define(:version => 20120312233406) do
   create_table "users", :force => true do |t|
     t.string   "name"
     t.string   "email"
-    t.text     "about_me",        :limit => 255
     t.boolean  "journalist"
     t.string   "twitter_id"
     t.string   "interests"
-    t.datetime "created_at",                                        :null => false
-    t.datetime "updated_at",                                        :null => false
+    t.datetime "created_at",                         :null => false
+    t.datetime "updated_at",                         :null => false
     t.string   "password_digest"
     t.string   "remember_token"
-    t.boolean  "admin",                          :default => false
+    t.boolean  "admin",           :default => false
+    t.text     "about_me"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

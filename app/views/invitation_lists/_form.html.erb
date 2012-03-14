@@ -1,0 +1,17 @@
+<%= form_for(@invitation_list) do |f| %>
+  <div class="journalist">
+    <p id="q"> <%= f.label :Are_you_a_journalist? %></p>
+	<div id="yes">
+	<%= f.radio_button :journalist, :true %> Yes
+	</div>
+	<div id="no">
+	<%= f.radio_button :journalist, :false %> No
+	</div>
+  </div>
+
+<div class="emailcont">
+		<%= f.text_field :email, placeholder: "Email address..." %>
+			<%= f.submit "Create", id: 'submit' %>
+	</div>
+
+<% end %>

@@ -9,6 +9,7 @@ class ProjectsController < ApplicationController
 
    def show
      @project = Project.find(params[:id])
+     @comments = @project.comments.paginate(page: params[:page])
    end
 
    def new
@@ -17,6 +18,7 @@ class ProjectsController < ApplicationController
 
    def edit
       @project = Project.find(params[:id])
+      redirect_to @project unless current_user.id == @project.user_id
    end
 
    def create

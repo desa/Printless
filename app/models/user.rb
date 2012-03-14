@@ -1,18 +1,3 @@
-# == Schema Information
-#
-# Table name: users
-#
-#  id         :integer         not null, primary key
-#  name       :string(255)
-#  email      :string(255)
-#  about_me   :string(255)
-#  journalist :boolean
-#  twitter_id :string(255)
-#  interests  :string(255)
-#  created_at :datetime        not null
-#  updated_at :datetime        not null
-#
-
 class User < ActiveRecord::Base
   attr_accessible :name, :email, :about_me, :twitter_id, :interests,
                   :password, :password_confirmation, :journalist
@@ -20,8 +5,18 @@ class User < ActiveRecord::Base
   
   has_many :projects, dependent: :destroy
   has_many :articles, dependent: :destroy
-  #has_many :relationships, foreign_key: "follower_id", dependent: :destroy
-  #has_many :followed_users, through: :relationships, source: :followed
+  has_many :comments, dependent: :destroy
+  #has_many :donations
+  
+  #has_many :benefactors, through: :donations, source: :donatee
+  
+  has_many :relationships, foreign_key: "follower_id", dependent: :destroy
+  has_many :followed_users, through: :relationships, source: :followed
+  
+  has_many :reverse_relationships, foreign_key: "followed_id",
+                                   class_name:  "Relationship",
+                                   dependent:    :destroy
+  has_many :followers, through: :reverse_relationships, source: :follower
   
   before_save :create_remember_token
   
@@ -32,6 +27,19 @@ class User < ActiveRecord::Base
                     uniqueness: { case_sensitive: false }
 
   validates :password, length: { minimum: 6 }
+  
+  
+  def following?(other_user)
+    self.relationships.find_by_followed_id(other_user.id)
+  end
+  
+  def follow!(other_user)
+    self.relationships.create!(followed_id: other_user.id)
+  end
+  
+  def unfollow!(other_user)
+    relationships.find_by_followed_id(other_user.id).destroy
+  end
   
   private
   def create_remember_token

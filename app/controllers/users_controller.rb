@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
-  before_filter :signed_in_user, only: [:index, :edit, :update]
+  before_filter :signed_in_user,
+                only: [:index, :edit, :update, :following, :followers]
   before_filter :current_user,   only: [:edit, :update, :destroy]
   before_filter :admin_user,     only: :destroy
   
@@ -32,6 +33,7 @@ class UsersController < ApplicationController
   # Gets a user based on params for edit page #  
   def edit
     @user = User.find(params[:id])
+    redirect_to @user unless @user == current_user
   end
 
   # Updates a user based on params from edit page #   
@@ -63,8 +65,22 @@ class UsersController < ApplicationController
     end
   end
   
-  private
+  def following
+    @title = "Following"
+    @user  = User.find(params[:id])
+    @users = @user.followed_users.paginate(page: params[:page])
+    render 'show_follow'
+  end
   
+  def followers
+    @title = "Followers"
+    @user  = User.find(params[:id])
+    @users = @user.followers.paginate(page: params[:page])
+    render 'show_follow'
+  end
+  
+  
+  private
   def admin_user
     redirect_to(root_path) unless current_user.admin?
   end

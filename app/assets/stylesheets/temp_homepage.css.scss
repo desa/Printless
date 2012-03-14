@@ -1,7 +1,6 @@
 body {
     background-color:#FFF;
 }
-
 #newtake {
     font-family: courier, "Letter Gothic Std", Verdana,Geneva,'DejaVu Sans',sans-serif;
     font-size:1em;
@@ -30,7 +29,7 @@ body {
     font-size:1.75em;
     text-align:left;
     margin-left:200px;
-    color:#B20606;
+    color:#FF6700;
 }
 
 body a {color:#000; text-decoration:none}
@@ -64,7 +63,7 @@ body a:active {color:#000; text-decoration:none;}
     
 }
 
-#email {
+#invitation_list_email {
     border-color:black;
     width:210px;
     height:15px;
@@ -102,10 +101,38 @@ body a:active {color:#000; text-decoration:none;}
     left:20px;
     font-family: "Letter Gothic Std", Verdana,Geneva,'DejaVu Sans',sans-serif;
 }
-/**add twitter and facebook links**/
+#twitter {
+    display:block;
+    position:absolute;
+    top:5px;
+    right:60px;
+    width:25px;
+    height:25px;
+    background: url('twitter_dualbw.png') left;
+    text-indent:-99999px;
+}
+
+#twitter:hover {
+    background-position: right;
+}
+
+#fb {
+    display:block;
+    position:absolute;
+	top:5px;
+	right:20px;
+    width:25px;
+    height:25px;
+    background: url('fb_dualbw.png') left;
+    text-indent:-99999px;
+}
+
+#fb:hover {
+    background-position: right;
+}
 
 
-.tempcontainer {
+.container {
     width:600px;
     margin-bottom:300px;
     margin-top:50px;
@@ -137,14 +164,17 @@ body a:active {color:#000; text-decoration:none;}
 }
 #yes {
 display:block;
+width:60px;
 float:left;
 margin-top:9px;
+margin-left:0px;
 }
 
 #no {
 display:block;
 float:left;
-margin-top:15px;
+width:60px;
+margin-top:9px;
 }
 
 .emailcont {
@@ -153,32 +183,3 @@ margin-top:15px;
     clear:left;
 }
 
-#twitter {
-    display:block;
-    position:absolute;
-    bottom:10px;
-    right:60px;
-    width:25px;
-    height:25px;
-    background: url('twitter_dualbw.png') left;
-    text-indent:-99999px;
-}
-
-#twitter:hover {
-    background-position: right;
-}
-
-#fb {
-    display:block;
-    position:absolute;
-	bottom:10px;
-	right:20px;
-    width:25px;
-    height:25px;
-    background: url('fb_dualbw.png') left;
-    text-indent:-99999px;
-}
-
-#fb:hover {
-    background-position: right;
-}
