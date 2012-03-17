@@ -4,6 +4,8 @@ gem 'rails', '3.2.1'
 gem 'bcrypt-ruby', '3.0.1'
 gem 'faker', '1.0.1'
 gem 'will_paginate'
+gem "execjs"
+gem "therubyracer"
 
 group :development, :test do
 	gem 'sqlite3'
@@ -28,6 +30,4 @@ end
 
 group :production do
 	gem 'pg'
-	gem "execjs"
-	gem "therubyracer"
 end
