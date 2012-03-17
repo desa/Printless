@@ -1,0 +1,25 @@
+<div id="navsection">
+	<ul id="nav">
+		<li class="taba" id="tab1">
+			<%= link_to "My Profile", current_user %>
+		</li>
+		<li class="taba" id="tab2">
+			<%= link_to 'New Article', new_article_path %>
+		</li>
+		<li class="tabb" id="tab3">
+			<%= link_to 'New Project', new_project_path %>
+		</li>	
+		<li class="tabb" id="tab4">
+			<%= link_to "Edit Profile", edit_user_path(current_user) %>
+		</li>	
+		<li class="tabb" id="tab5">
+			<a href="#">About</a>
+		</li>
+		<li class="tabb" id="tab6">
+			<a href="#">Give us feedback</a>
+		</li>
+		<li class="tabb" id="tab7">
+			<%= link_to "Sign Out", signout_path %>
+		</li>
+	</ul>
+</div>

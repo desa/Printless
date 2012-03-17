@@ -4,9 +4,8 @@
 
 <ul class="projects">
   <% @projects.each do |project| %>
-    <li> <%= User.find(project.user_id).name %><br/>
-	 	 <%= link_to project_path(project), project %><br/>
-		 <%= project.title %><br/>
+    <li> <%= link_to User.find(project.user_id).name, User.find(project.user_id) %><br/>
+	 	 <%= link_to project.title, project %><br/>
 		 <%= project.content %></li><br/>
 		Money Wanted: <%= project.money_wanted %><br/><br/>
   <% end %>

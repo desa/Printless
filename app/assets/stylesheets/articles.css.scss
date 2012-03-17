@@ -1,3 +1,220 @@
 // Place all the styles related to the Articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+    font-family: 'Questrial', Helvetica, Arial,'DejaVu Sans','Liberation Sans',Freesans,sans-serif;
+    color:#3F3F3F;
+}
+    body a {color:#3F3F3F; text-decoration:none}
+    body a:link {color:#3F3F3F; text-decoration:none;}
+    body a:visted {color:#333; text-decoration:none;}
+    body a:hover {color:#B20606; text-decoration:none;}
+    body a:active {color:#000; text-decoration:none;}
+
+ul {
+    list-style-type:none;
+}
+
+.container {
+    width:960px;
+    top:-40px;
+    margin-left:auto;
+    margin-right:auto;
+    display:block;
+    position:relative;
+
+}
+
+.outercontainer {
+    display:block;
+    width:960px;
+    height:120%;
+    left:50%;
+    top:-10px;
+    margin-left:-480px;
+    position:fixed;
+    -moz-box-shadow:    0px 0px 7px 4px #ccc;
+    -webkit-box-shadow: 0px 0px 7px 4px #ccc;
+    box-shadow:         0px 0px 7px 4px #ccc;
+    
+}
+    .header1 {
+        display:block;
+        position:relative;
+        height:145px;
+        width:95%;
+        margin-left:auto;
+        margin-right:auto;
+        border-bottom:solid 1px #000;
+    }
+        .logo {
+            display:block;
+            position:absolute;
+            left:20px;
+            top:40px;
+        }
+        #twitter {
+            display:block;
+            position:absolute;
+            right:0px;
+            top:30px;
+            width:25px;
+            height:25px;
+            background: url('twitter_dualbw.png') left;
+            text-indent:-99999px;
+            border-radius:5px;
+            -moz-border-radius:5px;
+        }
+            #twitter:hover {
+                background-position: right;
+            }
+
+        #fb {
+            display:block;
+            position:absolute;
+            right:35px;
+            top:30px;
+            margin-left:10px;
+            width:25px;
+            height:25px;
+            background: url('fb_dualbw.png') left;
+            text-indent:-99999px;
+            border-radius:5px;
+            -moz-border-radius:5px;
+        }
+            #fb:hover {
+                background-position: right;
+            }
+
+#navsection {
+    display:block;
+    width:95%%;
+    margin-left:auto;
+    margin-right:auto;
+    height:30px;
+    border-bottom:dotted 1px #CCC;
+}
+    #nav li {
+        display:block;
+        margin-left:20px;
+        margin-right:20px;
+        float:left;
+    }
+    #nav ul {
+        visibility:hidden;
+    }
+    
+#firstcontent {
+    display:block;
+    position:relative;
+    width:95%;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:10px;
+}
+
+            .article {
+                position:relative;
+                padding-bottom:10px;
+                width:500px;
+                margin-top:40px;
+            }
+                .article h1 {
+                    font-size:1.25em; 
+                    padding-top:10px;
+                    margin-bottom:10px;
+                    
+                        color:#911C1C;
+                }
+                .articleinfo {
+                    position:relative;
+                    display:block;
+                    width:100%;
+                    margin-bottom:20px;
+                    left:-40px;
+                }
+                .articleinfo li {
+                    display:block;
+                    margin-right:30px;
+                    color:#666;
+                    font-size:.85em;
+                    letter-spacing:0.2em;
+                    margin-bottom:20px;
+                    float:left;
+                }
+                    .articleinfo a {
+                        color:#666;
+                    }
+                    .articleinfo a:link {
+                        color:#666;
+                    }
+                    .articleinfo a:hover {
+                        color:#B20606;
+                    }
+                    .articleinfo a:active {
+                        color:#666;
+                    }
+                    .date {
+                        margin-left:10px;
+                    }
+
+                .editarticle {
+                    font-style:italic;
+                }
+
+                .editarticle:link {
+                font-style:italic;
+                }
+
+                .article p {
+                    font-size:.85em;
+                    clear:left;
+                    margin-top:20px;
+                    line-height: 150%;
+                    
+                }
+        #articleabout {
+            position: absolute;
+            top:0px;
+            right:50px;
+            background-color:#F9F9F9;
+            width:200px;
+            padding:20px;
+            line-height: 200%;
+            font-style:italic;
+            font-size:.80em;
+            border-radius:5px;
+            -moz-border-radius:5px;
+        }
+
+        
+#footer1 {
+    position:relative;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    width:95%;
+    height:20px;
+    clear:left;
+    text-align:center;
+    border-top: solid 1px black;
+    background-color:#FFF;
+    top:20px;
+}
+    #footer1 li {
+        display:inline;
+        margin:20px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+

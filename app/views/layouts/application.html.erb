@@ -1,17 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <%= render 'layouts/stylesheets' %>
+    <%= render 'stylesheets' %>
     <%= javascript_include_tag "application" %>
     <%= csrf_meta_tags %>
+	<link href='http://fonts.googleapis.com/css?family=Questrial'
+		rel='stylesheet'type='text/css'>
   </head>
   <body>
+	
+	<div class="outercontainer">
+	</div>
+	
     <div class="container">
       <%= render 'layouts/header1' %>
-      <section class="round">
+
         <%= yield %>
-      </section>
       <%= render 'layouts/footer' %>
     </div>
+
   </body>
 </html>

@@ -1,4 +1,6 @@
 class InvitationListsController < ApplicationController
+  layout "invitation_list" 
+  
   def temphome
     @invitation_list = InvitationList.new
   end

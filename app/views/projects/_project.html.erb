@@ -1,13 +1,33 @@
-<tr>
-  <td class="project">
-	<strong>Author</strong> <%= @project.user_id %><br />
-	 <strong>Title</strong> <%= @project.title %><br/>
-	<strong>Content</strong> <%= @project.content %><br/>
-	<strong>Money wanted</strong> <%= @project.money_wanted %><br/>
-	<strong>URL</strong>  <%= link_to article_path(@project), @project %><br/>
-    <span class="timestamp">
-      Posted <%= time_ago_in_words(@project.created_at) %> ago.
-    </span>
-  </td>
-</tr>
+<div class="project">
+	<h1 class="projecttitle"><%= @project.title %></h1>
+	<ul class = "projectinfo">
+		<li class="byline"><span class="by">by</span>
+		<%= link_to @author.name, @author, :class => "author" %></li>
+		<li class="date"><span id="topdate">
+		<%= @project.created_at %></span></li>
+		<% if current_user == @author %>
+			<li><%= link_to "Edit Project", edit_project_path,
+					:class => "editproject" %></li>
+		<% end %>
+	</ul>
+	
+	 <p><%= @project.content %></p>
+	
+	<strong>Money Wanted:</strong><%= @project.money_wanted %><br/>
+	<strong>Money Earned:</strong>
+		<% if @project.money_earned == nil %>
+			0
+		<% else %>
+			<%= @project.money_earned %>
+		<% end %><br/>
+	
+	<% if current_user == @author %>
+	<%= link_to "Edit Project", edit_project_path,
+				:class => "editproject" %>
+	<% end %>
+	
+</div>
 
+<div id="projectabout">
+	This is a preliminary view of your project. Only you can view this project at this time. When we are ready, your articles will be the first ones opened to the public.
+	</div>

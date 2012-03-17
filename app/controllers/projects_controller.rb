@@ -9,6 +9,7 @@ class ProjectsController < ApplicationController
 
    def show
      @project = Project.find(params[:id])
+     @author = User.find(@project.user_id)
      @comments = @project.comments.paginate(page: params[:page])
    end
 

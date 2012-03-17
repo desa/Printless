@@ -1,17 +1,10 @@
-<ul>
-	<% if current_user.id == @project.user_id %>
-	<li><%= link_to "Edit Project", edit_project_path %></li>
-	<li><%= #doesnt work#
-	link_to "Delete Project", project_path, via: :delete %></li>
-	<% end %>
-<ul>
-	
-<table class="show-project">
-	
-	<%= render '/projects/project' %>
-
-</table>
 
 
-<strong>Comments</strong><br/>
-	<%= render 'comments/comments' %>
+	<div id="firstcontent">
+		<%= render 'project' %>
+	</div>
+
+
+
+	<!--<strong>Comments</strong><br/>
+		<%= render 'comments/comments' %>-->

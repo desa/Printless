@@ -1,12 +1,25 @@
-<tr>
-  <td class="article">
-	<strong>Author</strong> <%= @article.user_id %><br />
-	 <strong>Title</strong> <%= @article.title %><br/>
-	<strong>Content</strong> <%= @article.content %><br/>
-	<strong>URL</strong>  <%= link_to article_path(@article), @article %><br/>
-    <span class="timestamp">
-      Posted <%= time_ago_in_words(@article.created_at) %> ago.
-    </span>
-  </td>
-</tr>
+<div class="article">
+	<h1 class="articletitle"><%= @article.title %></h1>
+	<ul class = "articleinfo">
+		<li class="byline"><span class="by">by</span>
+		<%= link_to @author.name, @author, :class => "author" %></li>
+		<li class="date"><span id="topdate">
+		<%= @article.created_at %></span></li>
+		<% if current_user == @author %>
+			<li><%= link_to "Edit Article", edit_article_path,
+					:class => "editarticle" %></li>
+		<% end %>
+	</ul>
+	
+	 <p><%= @article.content %></p>
+	
+	<% if current_user == @author %>
+	<%= link_to "Edit Article", edit_article_path,
+				:class => "editarticle" %>
+	<% end %>
+	
+</div>
 
+<div id="articleabout">
+	This is a preliminary view of your article. Only you can view this article at this time. When we are ready, your articles will be the first ones opened to the public.
+	</div>

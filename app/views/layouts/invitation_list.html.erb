@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Printless TempHomepage</title>
+    <%= render 'layouts/stylesheets' %>
+	<%= stylesheet_link_tag "invitation_list", :media => "all" %>
+	
+	<%= stylesheet_link_tag "signupstyle", :media => "all" %>
+	
+	<%= stylesheet_link_tag "temp_homepage", :media => "all" %>
+	
+    <%= javascript_include_tag "temp_homepage" %>
+    <%= csrf_meta_tags %>
+
+</head>
+
+<body>
+	
+	<div id="contentwrapper">
+	<div class="tempcontainer">
+		<%= render 'invitation_lists/header' %>
+	<div class="content">
+		<%= render 'invitation_lists/content' %>
+	</div>
+</div>
+</div>	
+</body>
