@@ -10,7 +10,9 @@ Printless::Application.routes.draw do
   resources :relationships, only: [:create, :destroy]
   resources :invitation_lists, only: [:new, :create]
   
-  match '/signup',  to: 'users#new'
+  #Change back for live version
+  #match '/signup',  to: 'users#new'
+  match '/signup', to: 'invitation_lists#temphome'
   match '/signin',  to: 'sessions#new'
   get '/signout', to: 'sessions#destroy', via: :delete
 

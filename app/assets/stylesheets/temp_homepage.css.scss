@@ -1,115 +1,158 @@
 body {
-    background-color:#FFF;
-}
-#newtake {
-    font-family: courier, "Letter Gothic Std", Verdana,Geneva,'DejaVu Sans',sans-serif;
-    font-size:1em;
-    margin-bottom:0px;
-    margin-top:30px;
-    font-size:1.75em;
-    text-decoration:none;
-    margin-left:50px;
-    text-align:left;
+    font-family: 'Questrial', Helvetica, Arial,'DejaVu Sans','Liberation Sans',Freesans,sans-serif;
+    color:#999;
 }
 
-#invite {
-    font-family:"Letter Gothic Std", Veranda, Geneva,'DejaVu Sans',sans-serif;
-    font-style: italics;
-    font-size:1em;
-    margin-top:40px;
-    margin-bottom:30px;
-    text-align:left;
-    margin-left:50px;
-    margin-right:50px;
-}
 
-#journalism {
-    font-family:"cn", courier;
-    margin-top:0px;
-    font-size:1.75em;
-    text-align:left;
-    margin-left:200px;
-    color:#FF6700;
-}
-
-body a {color:#000; text-decoration:none}
-body a:link {color:#000; text-decoration:none;}
+body a {color:#999; text-decoration:none}
+body a:link {color:#999; text-decoration:none;}
 body a:visted {color:#333; text-decoration:none;}
-body a:hover {text-decoration:underline;}
+body a:hover {color:#B20606; text-decoration:none;}
 body a:active {color:#000; text-decoration:none;}
 
 .header {
+    background: url('pllogolong2.png') no-repeat;
+    background-position:center;
     position:relative;
-    margin-left:auto;
-    margin-right:auto;
-    width:500px;
-    margin-bottom:13px;
-    margin-top:10px;
+    top:-20px;
+    width:100%;
+    height:120px;
+    right:0px;
 }
-
-
 
 .content {
     position:relative;
-    width:500px;
-    height:390px;
+    width:700px;
+    height:350px;
     margin-left:auto;
     margin-right:auto;
-    padding-top:15px;
-    border-color:#000;
-    border-style:solid;
-    border-width:1px;
+    padding-top:0px;
     text-align:center;
     
 }
 
-#invitation_list_email {
-    border-color:black;
-    width:210px;
-    height:15px;
-    margin-right:15px;
-    font-family: "Letter Gothic Std", Verdana,Geneva,'DejaVu Sans',sans-serif;
-    color:#000;
-    border-width:2px;
-    padding-top:4px;
-    padding-bottom:2px;
+#invitation_list_email {    
+    width:200px;
+    height:20px;
+    display:block;
+    position:absolute;
+    left:102px;
+    background-color:#EFEFEF;
+    border-style:none;
+}
+#invitation_list_email:focus {
+    background-color:white;
+    outline: none;
+    border:solid 1px #000;
 }
 
 #submit {
-    border-radius:5px;
-    -moz-border-radius:5px;
-    width:70px;
+    display:block;
+    position:relative;
+    left:332px;
+    border:solid 1px #CCC;
     background-color:#FFF;
-    border-color:#000;
-    color:#000;
-    border-width:2px;
-    height:24px;
-    font-family: "Letter Gothic Std", Verdana,Geneva,'DejaVu Sans',sans-serif;
-    padding-top:5px;
+    font-size:1em;
+    margin-top:0px;
+    color:#666;
 }
 
-#submit:hover {
-    border-color:#000;
-    background-color:#000;
-    color:#FFF;
-    border-width:1px;
+#submit:active {
+    background-color:#CCC;
 }
+
 #contact {
     position:absolute;
     text-align:right;
     bottom:10px;
-    left:20px;
-    font-family: "Letter Gothic Std", Verdana,Geneva,'DejaVu Sans',sans-serif;
+    left:50px;
+}
+
+
+
+.container {
+    margin-top:50px;
+    padding-top:20px;
+    padding-bottom:70px;
+
+}
+
+
+.journalist {
+    display:block;
+    position:relative;
+    margin-left:-56px;
+    left:0px;
+    height:50px;
+    width:500px;
+    margin-bottom:0px;
+    font-size:.8em;
+}
+
+#q {
+    display:block;
+    float:left;
+    margin-right:105px;
+    margin-left:102px;
+}
+#yes {
+display:block;
+float:left;
+margin-top:9px;
+margin-left:10px
+}
+
+#no {
+display:block;
+float:left;
+margin-top:9px;
+margin-left:10px
+}
+
+.emailcont {
+    position:relative;
+    display:block;
+    width:500px;
+    clear:left;
+    margin-left:-56px;
+}
+
+
+#newtake {
+    font-size:1.25em;
+    margin-bottom:30px;
+    margin-top:10px;
+    text-decoration:none;
+    margin-left:45px;
+    text-align:left;
+    color:#333;
+}
+
+#invite {
+    font-style: italics;
+    font-size:1em;
+    margin-top:40px;
+    margin-bottom:50px;
+    text-align:left;
+    margin-left:45px;
+    margin-right:50px;
+}
+
+#journalism {
+    font-size:1em;
+    color:#333;
 }
 #twitter {
     display:block;
     position:absolute;
-    top:5px;
-    right:60px;
+    right:80px;
+    bottom:10px;
     width:25px;
     height:25px;
     background: url('twitter_dualbw.png') left;
     text-indent:-99999px;
+    border-radius:5px;
+    -moz-border-radius:5px;
 }
 
 #twitter:hover {
@@ -119,67 +162,16 @@ body a:active {color:#000; text-decoration:none;}
 #fb {
     display:block;
     position:absolute;
-	top:5px;
-	right:20px;
+    right:110px;
+    bottom:10px;
+    margin-left:10px;
     width:25px;
     height:25px;
     background: url('fb_dualbw.png') left;
     text-indent:-99999px;
+    border-radius:5px;
+    -moz-border-radius:5px;
 }
-
 #fb:hover {
     background-position: right;
 }
-
-
-.container {
-    width:600px;
-    margin-bottom:300px;
-    margin-top:50px;
-    background-color:#FFF;
-    margin-left:auto;
-    margin-right:auto;
-    padding-top:20px;
-    padding-bottom:70px;
-}
-
-#period {
-    color:#000;
-}
-
-.journalist {
-    display:block;
-    height:50px;
-    width:500px;
-    font-family: "Letter Gothic Std", Verdana,Geneva,'DejaVu Sans',sans-serif;
-    margin-bottom:0px;
-    font-size:.8em;
-}
-
-#q {
-    display:block;
-    float:left;
-    margin-right:55px;
-    margin-left:102px;
-}
-#yes {
-display:block;
-width:60px;
-float:left;
-margin-top:9px;
-margin-left:0px;
-}
-
-#no {
-display:block;
-float:left;
-width:60px;
-margin-top:9px;
-}
-
-.emailcont {
-    display:block;
-    width:500px;
-    clear:left;
-}
-
