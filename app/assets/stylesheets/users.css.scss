@@ -2,3 +2,338 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+body {
+    font-family: 'Questrial', Helvetica, Arial,'DejaVu Sans','Liberation Sans',Freesans,sans-serif;
+    color:#3F3F3F;
+}
+    body a {color:#3F3F3F; text-decoration:none}
+    body a:link {color:#3F3F3F; text-decoration:none;}
+    body a:visted {color:#333; text-decoration:none;}
+    body a:hover {color:#B20606; text-decoration:none;}
+    body a:active {color:#000; text-decoration:none;}
+
+ul {
+    list-style-type:none;
+}
+
+.container {
+    width:960px;
+    top:-40px;
+    margin-left:auto;
+    margin-right:auto;
+    display:block;
+    position:relative;
+}
+
+.outercontainer {
+    display:block;
+    width:960px;
+    height:120%;
+    left:50%;
+    top:-10px;
+    margin-left:-480px;
+    position:fixed;
+    -moz-box-shadow:    0px 0px 7px 4px #ccc;
+    -webkit-box-shadow: 0px 0px 7px 4px #ccc;
+    box-shadow:         0px 0px 7px 4px #ccc;
+
+}
+    .header1 {
+      display: block;
+      position: relative;
+      height: 145px;
+      width: 95%;
+      margin-left: auto;
+      margin-right: auto;
+      border-bottom: solid 1px #000;
+     }
+        .logo {
+          display: block;
+          position: absolute;
+          left: 20px;
+          top: 40px;
+         }
+        #twitter {
+          display: block;
+          position: absolute;
+          right: 0px;
+          top: 30px;
+          width: 25px;
+          height: 25px;
+          background: url("twitter_dualbw.png") left;
+          text-indent: -99999px;
+          border-radius: 5px;
+          -moz-border-radius: 5px;
+        }
+            #twitter:hover {
+                background-position: right;
+            }
+        #fb {
+          display: block;
+          position: absolute;
+          right: 35px;
+          top: 30px;
+          margin-left: 10px;
+          width: 25px;
+          height: 25px;
+          background: url("fb_dualbw.png") left;
+          text-indent: -99999px;
+          border-radius: 5px;
+          -moz-border-radius: 5px;
+        }
+            #fb:hover {
+              background-position: right;
+            }
+    #navsection {
+      display: block;
+      width: 95%%;
+      margin-left: auto;
+      margin-right: auto;
+      height: 30px;
+      border-bottom: dotted 1px #CCC;
+
+        margin-bottom:10px;
+    }
+        #nav li {
+          display: block;
+          margin-left: 20px;
+          margin-right: 20px;
+          float: left;
+        }
+            #nav ul {
+              visibility: hidden;
+            }
+
+
+.content {
+    display:block;
+    position:relative;
+    width:97.5%;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:10px;
+
+}
+    #topcontent {
+        display:block;
+        position:relative;
+        float:left;
+        width:48.2%;
+        border-right-style:solid;
+            border-right-color:#CCC;
+            border-right-width:1px;
+    }
+        .profileinfo {
+            display:block;
+            position:relative;
+            width:97.5%;
+            height:200px;
+            margin:30px auto 20px auto;
+            overflow:auto;
+            padding:0px;
+        }
+            .profileinfo h1{
+                position:absolute;
+                left:175px;
+                top:-25px;
+                font-size:2em;
+            }
+            .profilepict {
+                 position:absolute;
+                 left:5px;
+                 top:-25px;
+            }
+            .about {
+                position:absolute;
+                left:175px;
+                top:40px;
+            }
+                .aboutword {
+                    font-size:1em;
+                    text-transform: uppercase;
+                    margin-right:10px;
+                    margin-bottom:20px;
+
+                }
+                .about p {
+                    font-size:.95em;
+                }
+            .followers {
+                position:absolute;
+                left:15px;
+                bottom:25px;
+            }
+                .followers h2 {
+
+                }
+                .followers ul {
+
+                }
+                .followers li {
+
+                }
+            .following {
+                position:absolute;
+                left:15px;
+                bottom:10px;
+            }
+                .following h2{
+
+                }
+                .following ul {
+
+                }
+                .following li {
+
+                }
+        .myprojects {
+            width:91%;
+            margin-left:auto;
+            margin-right:auto;
+            margin-top:20px;
+            border-top-style:solid;
+            border-top-color:#333;
+            border-top-width:1px;
+        }
+            .myprojects h1 {
+                border-style:none;
+                margin-top:15px;
+                font-size:1.45em;
+            }
+                .projects {
+
+                }
+                    .inprogress_project {
+
+                    }
+                        .inprogress_project h1 {
+
+                        }
+                        .inprogress_project p {
+
+                        }
+                        .moneystuff {
+
+                        }
+                            .goal {
+
+                            }
+                                .goal h2 {
+
+                                }
+                            .amount_raised {
+
+                            }
+                                .amount_raised h2 {
+
+                                }
+                        .inprogress_project h3 {
+
+                        }
+                        .completed_project {
+
+                        }
+                            .completed_project h1 {
+
+                            }
+                            .completed_project p {
+
+                            }
+                            .completed_project h3 {
+
+                            }
+    .myarticles {
+        width:48.2%;
+        margin-left:20px;
+        top:0px;
+        float:left;
+    }
+        .myarticles h1 {
+            border-style:none;
+            margin-top:15px;
+            font-size:1.45em;
+        }
+        .myarticles ul {
+        list-style-type:none;
+        margin-left:0px;
+        }
+        .article {
+            position:relative;
+            padding-bottom:10px;
+            padding-left:0px;
+        }
+            .article h1 {
+                font-size:1.25em;
+                border-top-style:dotted;
+                border-top-color:#333;
+                border-top-width:1px;
+                padding-top:10px;
+                margin-bottom:10px;
+            }
+
+            .articletitle, .articletitle a, .articletitle a:link {
+                color:#911C1C;
+            }
+            .article a:hover {
+
+            }
+            .article a:active {
+
+            }
+            .article a:visited {
+
+            }
+            .article p {
+                font-size:.85em;
+            }
+            .articleinfo {
+                position:relative;
+                display:block;
+                width:100%;
+                margin:0px;
+                margin-top:20px;
+                padding:0px;
+                padding-bottom:10px;
+            }
+                .byline {
+                    position:absolute;
+                    left:0px;
+                    top:-5px;
+                }
+                .date {
+                position:absolute;
+                left:40%;
+                    top:-5px;
+                }
+                .comments {
+                    position:absolute;
+                    right:0px;
+                    top:-5px;
+                }
+        .more {
+            border-top:dotted 1px #333;
+            width:100%;
+            margin-left:auto;
+            margin-right:auto;
+            padding-top:10px;
+            text-align:right;
+            margin-top:20px;
+        }
+
+#footer1 {
+    position:relative;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    width:97.5%;
+    height:20px;
+    clear:left;
+    text-align:center;
+    border-top: solid 1px black;
+    background-color:#FFF;
+    top:20px;
+}
+    #footer1 li {
+        display:inline;
+        margin:20px;
+    }

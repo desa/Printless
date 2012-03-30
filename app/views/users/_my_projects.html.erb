@@ -1,12 +1,20 @@
-<h2> My Projects </h2>
-<% if @user.projects.any? %>
-<%= will_paginate @projects %>
-<ul class="projects">
-  <% @projects.each do |project| %>
-    <li> <%= link_to project.title, project %></br>
-		 <%= project.content %><br/>
-		 <%= project.money_wanted %>
-    </li><br/><br/>
-  <% end %>
+<div class="myprojects">
+	<h1>Projects</h1>
+	<ul class="projects">
+		<% if @user.projects.any? %>
+		<%= will_paginate @projects %>
+		<% @projects.each do |project| %>
+		<li>
+			<h1><%= link_to project.title, project %></h1>
+			<p><%= project.content %></p>
+			<ul class="moneystuff">
+				<li class="goal">
+					<h2>Goal:</h2> <%= project.money_wanted %></li>
+				<li class="amount_raised">
+					<h2>Raised so far:</h2> <%= project.money_earned %></li>
+			</ul>
+    	</li>
+  	<% end %>
 <% end %>
 </ul>
+</div>

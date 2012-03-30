@@ -36,7 +36,8 @@ class UsersController < ApplicationController
     redirect_to @user unless @user == current_user
   end
 
-  # Updates a user based on params from edit page #   
+  # Updates a user based on params from edit page #  
+  ### NOTE NEED TO FIX HERE FOR PASSWORD PAGE### 
   def update
     @user = User.find(params[:id])
     if @user.update_attributes(params[:user])

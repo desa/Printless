@@ -1,11 +1,21 @@
-<h2> My Articles </h2>
-<% if @user.articles.any? %>
-<%= will_paginate @articles %>
-<ul class="articles">
-  <% @articles.each do |article| %>
-    <li> <%= link_to article.title, article %></br>
-		 <%= article.content %>
-    </li><br/><br/>
-  <% end %>
+<div class="myarticles">
+	<h1>Articles</h1>
+	<ul class="article">
+		<% if @user.articles.any? %>
+		<%= will_paginate @articles %>
+		<% @articles.each do |article| %>
+			<h1 class="articletitle"><%= link_to article.title, article %></h1>
+			<p><%= article.content %></p>
+			<ul class="articleinfo">
+				<li class="byline"><span class="by">by</span>
+					<%= link_to @user.name, @user, :class => "author" %>
+				</li>
+				<li class="date"><span id="topdate"> <%= article.created_at.to_date %></span>
+				</li>
+				<li class="comments"><a href="#"><span
+				id="commentno1">this</span> needs to be fixed </a></li>
+			</ul>
+  	<% end %>
 <% end %>
 </ul>
+</div>

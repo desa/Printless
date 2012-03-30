@@ -1,7 +1,7 @@
 <% provide :title, "Edit user" %> 
 <h1>Edit user</h1>
 
-<%= form_for(@user) do |f| %>
+<%= form_for @user do |f| %>
   <%= render 'shared/error_messages' %>
   <div class="field">
     <%= f.label :name %><br />
@@ -23,12 +23,12 @@
     <%= f.label :interests %><br />
     <%= f.text_field :interests %>
   </div>
-  <div class="field">
+    <div class="field">
     <%= f.label :password %><br />
     <%= f.password_field :password %>
   </div>
   <div class="field">
-    <%= f.label :password_confirmation, "Confirmation" %><br />
+    <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation %>
   </div>
   <div class="actions">
