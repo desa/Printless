@@ -6,6 +6,7 @@ gem 'faker', '1.0.1'
 gem 'will_paginate'
 gem "execjs"
 gem "therubyracer"
+gem 'friendly_id'
 
 gem 'rmagick'
 gem 'carrierwave'
