@@ -3,6 +3,11 @@ class UsersController < ApplicationController
                 only: [:index, :edit, :update, :following, :followers]
   before_filter :current_user,   only: [:edit, :update, :destroy]
   before_filter :admin_user,     only: :destroy
+
+  def change_password
+    @user = User.find(params[:id])
+    redirect_to @user unless @user == current_user
+  end
   
   # Function deletes the current user and returns them to the root path #
   def destroy
