@@ -1,0 +1,2 @@
+class MostlyStaticPagesController < ApplicationController
+end
