@@ -7,6 +7,9 @@ gem 'will_paginate'
 gem "execjs"
 gem "therubyracer"
 
+gem 'rmagick'
+gem 'carrierwave'
+
 group :development, :test do
 	gem 'sqlite3'
 	gem 'annotate', '~> 2.4.1.beta'
