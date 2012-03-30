@@ -18,5 +18,8 @@ Printless::Application.routes.draw do
   match '/signin',  to: 'sessions#new'
   get '/signout', to: 'sessions#destroy', via: :delete
 
+  match '/contact', to: 'mostly_static_pages#contact'
+  match '/about', to: 'mostly_static_pages#about'
+
   root :to => 'invitation_lists#temphome'
 end
