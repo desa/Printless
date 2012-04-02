@@ -186,7 +186,10 @@ ul {
                 .following li {
 
                 }
-        .myprojects {
+		.myprojects {
+			visibility:hidden;
+		}
+/*        .myprojects {
             width:91%;
             margin-left:auto;
             margin-right:auto;
@@ -241,7 +244,7 @@ ul {
                             }
                             .completed_project h3 {
 
-                            }
+                            }*/
     .myarticles {
         width:48.2%;
         margin-left:20px;

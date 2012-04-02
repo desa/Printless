@@ -13,8 +13,8 @@ Printless::Application.routes.draw do
 
   match '/changepassword', to: 'users#change_password'
   #Change back for live version
-  #match '/signup',  to: 'users#new'
-  match '/signup', to: 'invitation_lists#temphome'
+  match '/signup',  to: 'users#new'
+  #match '/signup', to: 'invitation_lists#temphome'
   match '/signin',  to: 'sessions#new'
   get '/signout', to: 'sessions#destroy', via: :delete
 

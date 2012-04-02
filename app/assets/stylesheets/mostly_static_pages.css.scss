@@ -1,3 +1,156 @@
-// Place all the styles related to the mostly_static_pages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+    font-family: 'Questrial', Helvetica, Arial,'DejaVu Sans','Liberation Sans',Freesans,sans-serif;
+    color:#3F3F3F;
+}
+    body a {color:#3F3F3F; text-decoration:none}
+    body a:link {color:#3F3F3F; text-decoration:none;}
+    body a:visted {color:#333; text-decoration:none;}
+    body a:hover {color:#B20606; text-decoration:none;}
+    body a:active {color:#000; text-decoration:none;}
+
+ul {
+    list-style-type:none;
+}
+
+.container {
+    width:960px;
+    top:-40px;
+    margin-left:auto;
+    margin-right:auto;
+    display:block;
+    position:relative;
+
+}
+
+.outercontainer {
+    display:block;
+    width:960px;
+    height:120%;
+    left:50%;
+    top:-10px;
+    margin-left:-480px;
+    position:fixed;
+    -moz-box-shadow:    0px 0px 7px 4px #ccc;
+    -webkit-box-shadow: 0px 0px 7px 4px #ccc;
+    box-shadow:         0px 0px 7px 4px #ccc;
+    
+}
+    .header1 {
+        display:block;
+        position:relative;
+        height:145px;
+        width:95%;
+        margin-left:auto;
+        margin-right:auto;
+        border-bottom:solid 1px #000;
+    }
+        .logo {
+            display:block;
+            position:absolute;
+            left:20px;
+            top:40px;
+        }
+        #twitter {
+            display:block;
+            position:absolute;
+            right:0px;
+            top:30px;
+            width:25px;
+            height:25px;
+            background: url('twitter_dualbw.png') left;
+            text-indent:-99999px;
+            border-radius:5px;
+            -moz-border-radius:5px;
+        }
+            #twitter:hover {
+                background-position: right;
+            }
+
+        #fb {
+            display:block;
+            position:absolute;
+            right:35px;
+            top:30px;
+            margin-left:10px;
+            width:25px;
+            height:25px;
+            background: url('fb_dualbw.png') left;
+            text-indent:-99999px;
+            border-radius:5px;
+            -moz-border-radius:5px;
+        }
+            #fb:hover {
+                background-position: right;
+            }
+
+#navsection {
+    display:block;
+    width:95%%;
+    margin-left:auto;
+    margin-right:auto;
+    height:30px;
+    border-bottom:dotted 1px #CCC;
+}
+    #nav li {
+        display:block;
+        margin-left:20px;
+        margin-right:20px;
+        float:left;
+    }
+    #nav ul {
+        visibility:hidden;
+    }
+    
+.about {
+    display:block;
+    position:relative;
+    width:55%;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:200px;
+	padding:100px;
+	font-size: 1.2em;
+}
+
+.contact {
+	display:block;
+    position:relative;
+	margin-left:auto;
+	margin-right:auto;
+    margin-bottom:200px;
+	padding:100px;
+	font-size: 1.2em;
+	text-align:center;
+}
+
+        
+#footer1 {
+    position:relative;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    width:95%;
+    height:20px;
+    clear:left;
+    text-align:center;
+    border-top: solid 1px black;
+    background-color:#FFF;
+    top:20px;
+}
+    #footer1 li {
+        display:inline;
+        margin:20px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+

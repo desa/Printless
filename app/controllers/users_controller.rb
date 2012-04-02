@@ -58,7 +58,11 @@ class UsersController < ApplicationController
   
   # Obvi brah, new instance brah #
   def new
-    @user = User.new
+    if signed_in?
+      redirect_to current_user
+    else
+      @user = User.new
+    end
   end
   
   # brooooahahah #
@@ -94,7 +98,7 @@ class UsersController < ApplicationController
   end
   
   def update_edit_attributes
-    thing = [:name, :email, :twitter_id, :about_me]
+    thing = [:name, :image, :email, :twitter_id, :about_me]
     validity = true
     thing.each do |attribute|
       if @user.update_attribute(attribute, params[:user][attribute])

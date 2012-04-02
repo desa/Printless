@@ -33,7 +33,7 @@ body a:active {color:#000; text-decoration:none;}
     box-shadow:         0px 0px 7px 4px #ccc;
     
 }
-.header1{
+.headcontainer {
     display:block;
     position:relative;
     height:145px;
@@ -136,7 +136,7 @@ ul {
 }
 
 
-.signinform h1 {
+.signupform h1 {
     text-align:center;
     border-bottom:solid 1px #000;
     padding-bottom:10px;
@@ -147,7 +147,7 @@ ul {
     
 }
 
-.signinform {
+.signupform {
     display: block;
     position:relative;
     margin-left:auto;
@@ -176,7 +176,7 @@ ul {
     position:relative;
 }
 
-#session_email, #session_password {
+#user_name, #user_email, #user_password, #user_password_confirmation {
     width:200px;
     height:20px;
     display:block;
@@ -186,7 +186,7 @@ ul {
     background-color:#EFEFEF;
     border-style:none;
 }
-#session_email:focus, #session_password:focus {
+#user_name:focus, #user_email:focus, #user_password:focus, #user_password_confirmation:focus, #searchinput:focus{
     background-color:white;
     outline: none;
     border:solid 1px #000;
@@ -211,13 +211,13 @@ ul {
     background-color:#FFF;
 }
 
-#nonmember {
-    font-size:1em;
-    margin-top:20px;
+#member {
+    font-size:.75em;
+    margin-top:10px;
     text-align:center;
     margin-bottom:60px;
 }
-#footer1 {
+#footer2 {
     position:fixed;
     padding-bottom:40px;
     bottom:-20px;
@@ -229,7 +229,7 @@ ul {
     background-color:#FFF;
 }
 
-#footer1 li {
+#footer2 li {
     display:inline;
     margin:20px;
 }

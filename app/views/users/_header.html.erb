@@ -1,4 +1,5 @@
-<div id="navsection">
+<% if !current_user.nil? %>
+	<div id="navsection">
 	<ul id="nav">
 		<li class="taba" id="tab1">
 			<%= link_to "My Profile", current_user %>
@@ -25,3 +26,4 @@
 		</li>
 	</ul>
 </div>
+<% end %>
