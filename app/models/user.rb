@@ -1,7 +1,9 @@
 class User < ActiveRecord::Base
   attr_accessible :name, :email, :about_me, :twitter_id, :interests,
-                  :password, :password_confirmation, :journalist
+                  :password, :password_confirmation, :journalist, :image
   has_secure_password
+
+  mount_uploader :image, ImageUploader
   
   has_many :projects, dependent: :destroy
   has_many :articles, dependent: :destroy
@@ -26,7 +28,8 @@ class User < ActiveRecord::Base
   validates :email, presence: true, format: { with: valid_email_regex },
                     uniqueness: { case_sensitive: false }
 
-  validates :password, length: { minimum: 6 }
+#Fix this to work for update#
+#validates :password, length: { minimum: 6 }
   
   
   def following?(other_user)

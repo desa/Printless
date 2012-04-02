@@ -43,6 +43,9 @@ class UsersController < ApplicationController
 
   # Updates a user based on params from edit page #  
   ### NOTE NEED TO FIX HERE FOR PASSWORD PAGE### 
+    #params.select {
+   #   |param| [:name, :email, :twitter, :about_me, :interests].include? param
+    #}
   def update
     @user = User.find(params[:id])
     if @user.update_attributes(params[:user])

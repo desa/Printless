@@ -5,6 +5,10 @@
     <div class="profileinfo">
     <h1 id="name"> <%= @user.name %> </h1>
 
+      <div class="profilepict" id="michael_desa_picture">
+      <%= image_tag @user.image_url %>
+      </div>
+
       <div class="about">
        <p><span class="aboutword">About</span> <%= @user.about_me %> </p>
       </div>
