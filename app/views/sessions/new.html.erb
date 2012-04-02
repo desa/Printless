@@ -1,4 +1,5 @@
 <% provide :title, "Sign in" %>
+<div class="signinform">
 <h1>Sign in</h1>
 <%= form_for(:session, url: sessions_path) do |f| %>
   <div class="field">
@@ -14,4 +15,5 @@
   </div>
 <% end %>
 
-<p>New user? <%= link_to "Sign up now!", signup_path %></p>
+<div id='nonmember'>New user? <%= link_to "Sign up now!", signup_path %></div>
+</div>
