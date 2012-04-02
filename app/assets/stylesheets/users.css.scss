@@ -260,12 +260,13 @@ ul {
         list-style-type:none;
         margin-left:0px;
         }
-        .article {
+        .articlelist {
             position:relative;
             padding-bottom:10px;
             padding-left:0px;
+            border-bottom:dotted 1px #333;
         }
-            .article h1 {
+            .articlelist h1 {
                 font-size:1.25em;
                 border-top-style:dotted;
                 border-top-color:#333;
@@ -273,20 +274,38 @@ ul {
                 padding-top:10px;
                 margin-bottom:10px;
             }
+            #paginate_top {
+                position:absolute;
+                right:10px;
+                top:-20px;
+                font-size:.75em;
+            }
+            #paginate_bottom {
+                position:absolute;
+                right:10px;
+                bottom:-20px;
+                font-size:.75em;
+            }
+                .previous_page {
+                    
+                }
+                .next_page {
+                   margin-left:3px; 
+                }
 
             .articletitle, .articletitle a, .articletitle a:link {
                 color:#911C1C;
             }
-            .article a:hover {
+            .articlelist a:hover {
 
             }
-            .article a:active {
+            .articlelist a:active {
 
             }
-            .article a:visited {
+            .articlelist a:visited {
 
             }
-            .article p {
+            .articlelist p {
                 font-size:.85em;
             }
             .articleinfo {
@@ -302,10 +321,11 @@ ul {
                     position:absolute;
                     left:0px;
                     top:-5px;
+                    visibility:hidden;
                 }
                 .date {
                 position:absolute;
-                left:40%;
+                left:0px;
                     top:-5px;
                 }
                 .comments {
@@ -340,3 +360,35 @@ ul {
         display:inline;
         margin:20px;
     }
+    
+/*User List*/
+#all_users {
+    text-align:center;
+    border-bottom:solid 1px #000;
+    padding-bottom:10px;
+    position:relative;
+    top:-10px;
+    color:#000;
+}
+#user_list {
+    display: block;
+    position:relative;
+    margin-left:auto;
+    margin-right:auto;
+    width:400px;
+    padding:20px;
+    margin-top:30px;
+    margin-bottom:15px;
+}
+#user_paginate_top {
+    position:absolute;
+    right:20px;
+    top:80px;
+    font-size:.75em;
+}
+#user_paginate_bottom {
+    position:absolute;
+    right:10px;
+    bottom:30px;
+    font-size:.75em;
+}
