@@ -8,7 +8,6 @@ gem "execjs"
 gem "therubyracer"
 gem 'friendly_id'
 
-gem 'rmagick'
 gem 'carrierwave'
 
 group :development, :test do
