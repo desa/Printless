@@ -48,8 +48,7 @@ class UsersController < ApplicationController
     #}
   def update
     @user = User.find(params[:id])
-    if @user.update_attributes(params[:user])
-      flash[:success] = 'Profile updated'
+    if update_edit_attributes
       sign_in @user
       redirect_to @user
     else
@@ -92,6 +91,18 @@ class UsersController < ApplicationController
   private
   def admin_user
     redirect_to(root_path) unless current_user.admin?
+  end
+  
+  def update_edit_attributes
+    thing = [:name, :email, :twitter_id, :about_me]
+    validity = true
+    thing.each do |attribute|
+      if @user.update_attribute(attribute, params[:user][attribute])
+        validity = true && validity
+      else
+        validity = false && validity
+      end
+    end
   end
   
 end
