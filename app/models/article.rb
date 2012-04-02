@@ -8,5 +8,7 @@ class Article < ActiveRecord::Base
   validates :content, presence: true
   validates :user_id, presence: true
   
+  self.per_page = 5
+  
   #default_scope order: 'aricle.created_at DESC'
 end

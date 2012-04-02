@@ -5,6 +5,7 @@
 body {
     font-family: 'Questrial', Helvetica, Arial,'DejaVu Sans','Liberation Sans',Freesans,sans-serif;
     color:#3F3F3F;
+    margin:0px;
 }
     body a {color:#3F3F3F; text-decoration:none}
     body a:link {color:#3F3F3F; text-decoration:none;}
@@ -41,17 +42,17 @@ ul {
     .header1 {
       display: block;
       position: relative;
-      height: 145px;
+      height: 110px;
       width: 95%;
       margin-left: auto;
       margin-right: auto;
-      border-bottom: solid 1px #000;
+
      }
         .logo {
           display: block;
           position: absolute;
-          left: 20px;
-          top: 40px;
+          left: 0px;
+          top: 45px;
          }
         #twitter {
           display: block;
@@ -86,24 +87,37 @@ ul {
             }
     #navsection {
       display: block;
-      width: 95%%;
-      margin-left: auto;
-      margin-right: auto;
-      height: 30px;
-      border-bottom: dotted 1px #CCC;
-
-        margin-bottom:10px;
+      height: 35px;
+      position:relative;
+      top:-35px;
+      margin-left:210px;
     }
+        #nav {
+            height:35px;
+            margin:0px;
+        }
         #nav li {
           display: block;
-          margin-left: 20px;
-          margin-right: 20px;
+          position:relative;
+          width:153px;
+          height:35px;
+          margin-left: -20px;
+          margin-right: -20px;
           float: left;
+          padding-top:12px;
+          text-align:center;
+          background:url("tabtry.png") no-repeat;
+          font-size:.83em;
         }
-            #nav ul {
-              visibility: hidden;
-            }
-
+        #tab2, #tab3, #tab4, #tab5, #tab6 {
+            z-index:0;
+        }
+        #tab2:hover, #tab3:hover, #tab4:hover, #tab5:hover, #tab6:hover {
+            z-index:999;
+        }
+        #tab1 {
+            z-index:999;
+        }
 
 .content {
     display:block;
@@ -112,36 +126,32 @@ ul {
     margin-left:auto;
     margin-right:auto;
     margin-bottom:10px;
+    margin-top:-36px;
+    padding-top:20px;
+    border-top:solid 1px #000;
+    z-index:555;
 
 }
     #topcontent {
         display:block;
         position:relative;
-        float:left;
-        width:48.2%;
-        border-right-style:solid;
-            border-right-color:#CCC;
-            border-right-width:1px;
     }
         .profileinfo {
             display:block;
             position:relative;
             width:97.5%;
             height:200px;
-            margin:30px auto 20px auto;
-            overflow:auto;
+            margin:10px auto 20px auto;
             padding:0px;
+            top:-15px;
         }
             .profileinfo h1{
-                position:absolute;
-                left:175px;
-                top:-25px;
                 font-size:2em;
+                width:100%;
+                border-bottom:solid 1px #CCC;
+                text-align:center;
             }
             .profilepict {
-                 position:absolute;
-                 left:5px;
-                 top:-25px;
             }
             .about {
                 position:absolute;
@@ -187,6 +197,7 @@ ul {
 
                 }
 		.myprojects {
+		    height:0px;
 			visibility:hidden;
 		}
 /*        .myprojects {
